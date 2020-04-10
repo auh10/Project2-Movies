@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+    <link rel="stylesheet"src="style.css"></script>
+
+<style>
+    body {
+    font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    }
+    .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F1F1F1;
+    display: block;
+    }
+    .sidenav a:hover {
+    color: #F1F1F1;
+    }
+    .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 16px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    }
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    }
+    .navbar {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    }
+    .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+    .dropdown {
+    float: left;
+    overflow: hidden;
+    }
+    .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    }
+    .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(4, 4, 44);
+    }
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+    .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    }
+    .dropdown-content a:hover {
+    background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+    .openbtn {
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    }
+</style>
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="home.html">Home </a>
+                <a href="index.html">Top 100 IMDB Movies </a>
+                <a href="visualizations.html">Visualizations </a>
+
+                <form>
+                <div class="form-group">
+
+                <select class="openbtn">
+                    <option selected>Open this select menu</option>
+                    <option value="1"a href="action.html">Action</a></option>
+                    <option value="2"a href="adventure.html">Adventure</a></option>
+                    <option value="3"a href="animation.html">Animation</a></option>
+                    <option value="4"a href="animation.html">Biography</a></option>
+                    <option value="5"a href="comedy.html">Comedy</a></option>
+                    <option value="6"a href="crime.html">Crime</a></option>
+                    <option value="7"a href="documentary.html">Documentary</a></option>
+                    <option value="8"a href="drama.html">Drama</a></option>
+                    <option value="9"a href="family.html">Family</a></option>
+                    <option value="10"a href="fantasy.html">Fantasy</a></option>
+                    <option value="11"a href="filmnoir.html">Film Noir</a></option>
+                    <option value="12"a href="gameshow.html">Game Show</a></option>
+                    <option value="13"a href="history.html">History</a></option>
+                    <option value="14"a href="music.html">Music</a></option>
+                    <option value="15"a href="musical.html">Musical</a></option>
+                    <option value="16"a href="mystery.html">Mystery</a></option>
+                    <option value="17"a href="news.html">News</a></option>
+                    <option value="18"a href="reality.html">Reality TV</a></option>
+                    <option value="19"a href="romance.html">Romance</a></option>
+                    <option value="20"a href="scifi.html">SciFi</a></option>
+                    <option value="21"a href="short.html">Short</a></option>
+                    <option value="22"a href="sport.html">Sport</a></option>
+                    <option value="23"a href="talkshow.html">Talk Show</a></option>
+                    <option value="24"a href="thriller.html">Thriller</a></option>
+                    <option value="25"a href="war.html">War</a></option>
+                    <option value="26"a href="western.html">Western</a></option>
+                </select>
+
+                <input type="text" class="openbtn" id="myInput" onkeyup="myFunction()" placeholder="Search Keyword in Title">
+                </div>
+
+</form>
+
+            </div>
+        </div>
+    </div>
+
+<style>
+    body {
+    background-image: url("spiralcolorfilm.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+    </div>
+    <div class="row half-black">
+        <div class="col-md-12">
+            <h1><b><center>Welcome</center></h1></b>
+            <ul class="summary"></ul>
+            <p> If you're curious about highly rated movie choices, you have come to the right place.  We have created this site to showcase our list of top movies between the years 2000 through 2020.  You will be introduced to a variety of movie genres and we will explore any correlations or relationships between various aspects of these movies.  For example:<br> <ul>Do high ratings mean high-grossing movies?</ul>  <br><ul>Is there a specific genre that often produces box-office hits?</ul><br><ul>Does the release year have any affect on the ratings? </ul><br><ul>Was there a year that a specific genre was popular?</ul> <br><ul>Does the director influence movie ratings?</ul><br>On this website, we will be exploring some of our curious questions and sharing our findings.  The relationships or lack of relationships will be displayed on the Visualizations link in the form of graphs.  Thanks for visiting our site, and hope you enjoy our movie picks. </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table border="1" class="half-black table table-striped" id="myTable">
+        </div>
+    </div>
+</div>
+
+<style>
+    .half-black {
+    background: rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+    <div class="chart"></div>
+    <script src="plot.js"></script>
+
+</body>
+</html>
